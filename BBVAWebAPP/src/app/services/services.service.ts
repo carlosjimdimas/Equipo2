@@ -11,19 +11,19 @@ export class InsumosService {
 
   constructor(private httpClient: HttpClient) { }
 
-  // getUserMovements() {
-  //   const url = `${this.backendUrl}/Movimientos/${userEmail}`;
-  //   return this.httpClient.get(url);
-  // }
+  getUserMovements(userEmail: string) {
+    const url = `${this.backendUrl}/Movimientos/${userEmail}`;
+    return this.httpClient.get(url);
+  }
 
 
-  // postNewRegister(productId: string) {
-  //   const url = `${this.backendUrl}/product/${productId}`;
-  //   return this.httpClient.get(url);
-  // }
+  postNewRegister(newUser) {
+    const url = `${this.backendUrl}/Registro/`;
+    return this.httpClient.post(url, newUser );
+  }
 
-  // searchProducts(expression: string) {
-  //   const url = `${this.backendUrl}/product/${expression}`;
-  //   return this.httpClient.geturl);
-  // }
+  postLogin(userData) {
+    const url = `${this.backendUrl}/Login`;
+    return this.httpClient.post(url, userData);
+  }
 }
