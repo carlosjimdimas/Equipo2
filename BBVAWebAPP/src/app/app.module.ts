@@ -17,6 +17,7 @@ import { MovimientosComponent } from './component/movimientos/movimientos.compon
   imports: [
     BrowserModule,
     AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

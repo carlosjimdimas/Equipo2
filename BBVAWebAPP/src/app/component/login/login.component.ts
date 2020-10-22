@@ -26,4 +26,9 @@ export class LoginComponent implements OnInit {
  registrar(){
    this.router.navigate(['/register']);
  }
+
+onKey(event) {
+    this.email = event.target.value;
+  }
+
 }
