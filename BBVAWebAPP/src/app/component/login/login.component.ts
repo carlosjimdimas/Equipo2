@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {Servicios} from '../../services/services.service'
 
 @Component({
@@ -12,13 +13,17 @@ export class LoginComponent implements OnInit {
   contraseña: string = "";
 
   constructor(
+    private router : Router, 
   ) { }
 
   ngOnInit(): void {
   }
 
   login(){
+    this.router.navigate(['/movements']);
     console.log(this.email);
   }
-
+ registrar(){
+   this.router.navigate(['/register']);
+ }
 }
